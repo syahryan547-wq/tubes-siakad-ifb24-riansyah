@@ -40,5 +40,3 @@ Route::put('/update-mahasiswa/{npm}/update-data-mahasiswa', [MahasiswaController
 
 Route::get('/krs', [KrsController::class, 'index'])->name('krs');
 Route::get('/krs/create', [KrsController::class, 'create'])->name('form-create-krs');
-
-Route::get('/jadwal', [JadwalController::class, 'index'])->name('krs');
