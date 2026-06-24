@@ -31,7 +31,7 @@
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger btn-sm">Hapus</button>
                             </form>
-                            <button type="button" class="btn btn-warning btn-sm">Edit</button>
+                            <a href="{{ route('edit-matakuliah', ['kode_matakuliah' => $item->kode_matakuliah]) }}" class="btn btn-warning btn-sm">Edit</a>
                             <a href="{{route ('detail-matakuliah', ['kode_matakuliah'=>$item->kode_matakuliah])}}" class="btn btn-info btn-sm">Detail</a>
                         </td>
                     </tr>
