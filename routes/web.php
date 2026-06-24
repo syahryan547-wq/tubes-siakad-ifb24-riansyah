@@ -22,7 +22,12 @@ Route::delete('/dosen/{nidn}/delete-data-dosen', [DosenController::class, 'destr
 //edit
 Route::get('/edit-dosen/{nidn}/edit-data-dosen', [DosenController::class, 'edit'])->name('edit-dosen');
 Route::put('/update-dosen/{nidn}/update-data-dosen', [DosenController::class, 'update'])->name('update-dosen');
+// Edit Mata Kuliah
+Route::get('/edit-matakuliah/{kode_matakuliah}/edit-data-matakuliah', [MataKuliahController::class, 'edit'])
+    ->name('edit-matakuliah');
 
+Route::put('/update-matakuliah/{kode_matakuliah}/update-data-matakuliah', [MataKuliahController::class, 'update'])
+    ->name('update-matakuliah');
 
 Route::get('/matakuliah', [MataKuliahController::class, 'index'])->name('matakuliah');
 Route::get('/matakuliah/create', [MataKuliahController::class, 'create'])->name('form-create-matakuliah');
