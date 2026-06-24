@@ -28,6 +28,12 @@ Route::get('/matakuliah/create', [MataKuliahController::class, 'create'])->name(
 Route::post('/matakuliah/store', [MataKuliahController::class, 'store'])->name('store-matakuliah');
 Route::get('/detail-matakuliah/{kode_matakuliah}/detail-data-matakuliah', [MatakuliahController::class, 'show'])->name('detail-matakuliah');
 Route::delete('/matakuliah/{kode_matakuliah}/delete-data-matakuliah', [MatakuliahController::class, 'destroy'])->name('delete-matakuliah');
+// Edit Mata Kuliah
+Route::get('/edit-matakuliah/{kode_matakuliah}/edit-data-matakuliah', [MataKuliahController::class, 'edit'])
+    ->name('edit-matakuliah');
+
+Route::put('/update-matakuliah/{kode_matakuliah}/update-data-matakuliah', [MataKuliahController::class, 'update'])
+    ->name('update-matakuliah');
 
 Route::get('/mahasiswa', [MahasiswaController::class, 'index'])->name('mahasiswa');
 Route::get('/mahasiswa/create', [MahasiswaController::class, 'create'])->name('form-create-mahasiswa');
