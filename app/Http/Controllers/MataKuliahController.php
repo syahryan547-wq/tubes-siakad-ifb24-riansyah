@@ -57,18 +57,24 @@ class MataKuliahController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
-    {
-        //
-    }
+    public function edit(string $kode_matakuliah)
+{
+    $matakuliah = MataKuliah::findOrFail($kode_matakuliah);
+
+    return view('pages.matakuliah.edit-matakuliah', compact('matakuliah'));
+}
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
-    {
-        //
-    }
+    public function update(Request $request, string $kode_matakuliah)
+{
+    $matakuliah = MataKuliah::findOrFail($kode_matakuliah);
+
+    $matakuliah->update(['nama_matakuliah' => $request->nama_matakuliah,'sks' => $request->sks,]);
+
+    return redirect()->route('matakuliah');
+}
 
     /**
      * Remove the specified resource from storage.
