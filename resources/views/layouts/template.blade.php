@@ -51,9 +51,6 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="{{url('/matakuliah')}}">Mata Kuliah</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{{url('/krs')}}">Kartu Rencana Studi</a>
-                    </li>
                 </ul>
             </div>
         </div>
