@@ -6,11 +6,11 @@ use App\Http\Controllers\MataKuliahController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\KrsController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/beranda', function () {
+Route::get('/', function () {
     return view('pages.beranda');
 });
 
